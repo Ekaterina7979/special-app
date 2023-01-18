@@ -22,7 +22,7 @@ fun main() {
                 )
                 counter++
                 delay(400)
-                checkNumber(list = lotteryTicket1, number = it, namePlayer = "1", numberForRemove1 = numberForRemove)
+                checkNumber(list = lotteryTicket1, number = it, namePlayer = "1", numberForRemove3 = numberForRemove)
                 if (numberForRemove.size == 15) {
                     println("Game over. The player 1 won")
                     player2?.cancel()
@@ -46,7 +46,7 @@ fun main() {
                         |Number $it fell out.
                         |Let's check if the numbers match...""".trimMargin()
                 delay(400)
-                checkNumber(list = lotteryTicket2, number = it, namePlayer = "2", numberForRemove1 = numberForRemove)
+                checkNumber(list = lotteryTicket2, number = it, namePlayer = "2", numberForRemove3 = numberForRemove)
                 if (numberForRemove.size == 15) {
                     println("Game over. The player 2 won")
                     player1?.cancel()
@@ -58,7 +58,7 @@ fun main() {
     }
 }
 
-fun checkNumber(list: Array<Array<Int>>, number: Int, namePlayer: String, numberForRemove1: MutableList<Int>) {
+fun checkNumber(list: Array<Array<Int>>, number: Int, namePlayer: String, numberForRemove3: MutableList<Int>) {
 
     list.forEach { row ->
         row.forEach { item ->
@@ -67,12 +67,13 @@ fun checkNumber(list: Array<Array<Int>>, number: Int, namePlayer: String, number
                     """The number you are looking for is found
                                     | in the lottery ticket of the player $namePlayer""".trimMargin()
                 )
-                numberForRemove1.add(item)
+                numberForRemove3.add(item)
             }
         }
     }
 }
 
+// этот комментарий я пишу для тренировки работы с git
 
 object Presenter {
     private val scope = CoroutineScope(Job() + Dispatchers.Default)
