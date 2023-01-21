@@ -8,15 +8,15 @@ class LotteryTicket {
     fun getLotteryTicket(): Array<Array<Int>> {
         val numbersList: MutableList<Int> = (1..90).toMutableList()
         shuffle(numbersList)
-        val listNull = listOf(0, 0, 0, 0)
+        val listNull2 = listOf(0, 0, 0, 0)
         val row1 = numbersList.subList(0, 5)
-        val rowList1 = row1 + listNull
+        val rowList1 = row1 + listNull2
         shuffle(rowList1)
         val row2 = numbersList.subList(6, 11)
-        val rowList2 = row2 + listNull
+        val rowList2 = row2 + listNull2
         shuffle(rowList2)
         val row3 = numbersList.subList(12, 17)
-        val rowList3 = row3 + listNull
+        val rowList3 = row3 + listNull2
         shuffle(rowList3)
         for (i in lotteryTicket.indices) {
             for (t in 0 until 9) {
