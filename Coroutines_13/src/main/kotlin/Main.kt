@@ -11,7 +11,7 @@ fun main() {
     launch { Fibonacci.take(155) }
     launch { Fibonacci.take(300) }
     launch { Fibonacci.take(200) }
-    launch { Fibonacci.take(160) }
+    launch { Fibonacci.take(260) }
     }
 
     runFib(300, 100, 50)
