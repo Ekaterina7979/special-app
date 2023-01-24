@@ -14,7 +14,7 @@ fun main() {
     launch { Fibonacci.take(260) }
     }
 
-    runFib(300, 100, 50)
+    runFib(200, 100, 50)
 }
 
 fun runFib(n1: Int, n2: Int, n3: Int) {
